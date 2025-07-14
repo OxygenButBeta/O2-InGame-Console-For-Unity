@@ -1,44 +1,66 @@
 # O2 InGame Console
 
-**O2 Console** is an in-game, attribute-driven debug console for Unity that allows developers to define and execute commands easily. Built using the **Reflection API**, it dynamically discovers scene objects and registers command methods at runtime, making it incredibly flexible. With its real-time command execution and robust exception handling, O2 Console provides a powerful way to interact with and debug your game, enhancing your development experience.
+**O2 Console** is an in-game, attribute-driven debug console for Unity that allows developers to easily define and execute commands. Built on Unity's **Reflection API**, it dynamically discovers scene objects and registers command methods at runtime, providing a flexible and powerful tool for real-time game interaction and debugging.
 
 ---
 
 ## Features
 
-- **Command Attribute System**: Mark methods as console commands using `[ConsoleCommand("Command Key")]`, and O2 Console automatically registers them.
-- **Reflection-Based Command Registration**: O2 Console scans and registers commands from methods, properties, and fields (both public and private) during scene initialization.
-- **Supports Single Parameter Methods**: Currently, O2 Console supports methods with up to one parameter. Support for multiple parameters may be added in the future.
-- **Dynamic Command Execution**: Execute commands in-game directly through the console interface.
-- **Static and Instance Methods**: Supports executing both static and instance methods.
-- **Scene Discovery on Initialization**: O2 Console scans and interacts with objects present at scene load. For objects created during runtime, manual subscription to the console is required.
-- **Supports Parameter Passing**: Command methods can accept one parameter, and the console automatically converts the input to match the method signature.
-- **Exception Handling**: Automatically catches logs & exceptions and print it out to the console.
-- **Built-in Commands**: Includes commands like `/Clear` to clear console logs, with additional built-in functionality to interact with the game and the engine.
+- **Command Attribute System**  
+  Use `[ConsoleCommand("CommandKey")]` to mark methods, properties, or fields as console commands. The system auto-registers them.
 
+- **Reflection-Based Registration**  
+  Scans methods, properties, and fields (both public and private) on scene objects during initialization.
+
+- **Single Parameter Support**  
+  Supports commands with up to one parameter. Multiple parameters support may be added in the future.
+
+- **Dynamic Command Execution**  
+  Execute commands directly from the in-game console interface.
+
+- **Supports Static and Instance Members**  
+  Works with static and instance methods, properties, and fields alike.
+
+- **Scene Discovery on Initialization**  
+  Automatically discovers objects present when the scene loads. Runtime-instantiated objects require manual subscription.
+
+- **Parameter Passing and Conversion**  
+  Converts console input strings to match command method parameters automatically.
+
+- **Exception Handling and Logging**  
+  Automatically catches exceptions and logs errors to the console.
+
+- **Built-in Commands**  
+  Includes commands like `/Clear` to clear logs and others to interact with the game or engine.
 
 ---
-## Ready-to-use user interface
+
+## User Interface
+
 ![O2 Console Screenshot](Console%20UI%20Images/ConsoleIM%20(5).png)
+
 ### Additional Screenshots
-- [Screenshot 1](Console%UI%Images/ConsoleIM%(2).png)
-- [Screenshot 2](Console%UI%Images/ConsoleIM%(4).png)
+
+- [Screenshot 1](Console%UI%Images/ConsoleIM%(2).png)  
+- [Screenshot 2](Console%UI%Images/ConsoleIM%(4).png)  
 - [Screenshot 3](Console%UI%Images/ConsoleIM%(6).png)
+
+---
 
 ## Getting Started
 
 ### Installation
 
-1. Clone the **O2 Console** repository or download the unity package.
+1. Clone or download the **O2 Console** repository or Unity package.
 2. Import the O2 Console scripts into your Unity project.
-3. **Set up the Console UI**: The project includes a ready-to-use prefab for the console. Simply drag and drop the prefab into your scene to integrate the in-game console with an input field and log display.
-4. Optionally, configure a hotkey to toggle the console (e.g., `~` key).
+3. Add the provided console prefab into your scene. It contains the input field and log window.
+4. Optionally, set a hotkey (e.g., `~`) to toggle the console visibility.
 
 ### Usage
 
-To define a console command, simply use the `[ConsoleCommand]` attribute above any static or instance method, as well as public or private properties. The console will automatically register it for in-game use.
+Mark any method, property, or field you want to expose as a console command with `[ConsoleCommand("CommandKey")]`. The console will automatically register it.
 
-Property & Field Example (Public & private)
+#### Example: Properties and Fields
 ```csharp
     [ConsoleCommand("GetValue")]
     public int Value {get; set;}
