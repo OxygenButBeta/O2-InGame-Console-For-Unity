@@ -1,6 +1,6 @@
-# o2 InGame Console
+# O2 InGame Console
 
-**o2 Console** is an in-game, attribute-driven debug console for Unity that allows developers to define and execute commands easily. Built using the **Reflection API**, it dynamically discovers scene objects and registers command methods at runtime, making it incredibly flexible. With its real-time command execution and robust exception handling, O2 Console provides a powerful way to interact with and debug your game, enhancing your development experience.
+**O2 Console** is an in-game, attribute-driven debug console for Unity that allows developers to define and execute commands easily. Built using the **Reflection API**, it dynamically discovers scene objects and registers command methods at runtime, making it incredibly flexible. With its real-time command execution and robust exception handling, O2 Console provides a powerful way to interact with and debug your game, enhancing your development experience.
 
 ---
 
