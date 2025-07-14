@@ -39,13 +39,6 @@
 
 ![O2 Console Screenshot](Console%20UI%20Images/ConsoleIM%20(5).png)
 
-### Additional Screenshots  
-- [Screenshot 1](Console%UI%Images/ConsoleIM%(2).png)  
-- [Screenshot 2](Console%UI%Images/ConsoleIM%(4).png)  
-- [Screenshot 3](Console%UI%Images/ConsoleIM%(6).png)
-
----
-
 ## 🚀 Getting Started
 
 ### Installation
